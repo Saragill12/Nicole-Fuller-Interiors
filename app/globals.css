@@ -19,8 +19,48 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* horizontal extra space hide */
+}
+
+
+/* Smooth scrolling for the container */
+
+@font-face {
+  font-family: "meno-display";
+  src: url("/fonts/meno-display.woff2") format("woff2"),
+       url("/fonts/meno-display.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.logo svg path {
+  fill: #3d3d3d;
+  transition: fill 0.3s ease;
+}
+
+.logo:hover svg path {
+  fill: rgb(163, 47, 47);
+}
+.scrollIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between text and arrow */
+  color: #B43934; /* applies to both text and arrow */
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 18px;
+  display: inline-block;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(5px); }
 }

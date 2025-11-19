@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Navbar from "./components/Sections/Navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,15 +21,36 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+
+        <div className="inner absolute top-4 left-2 z-50">
+          <div className="logo">
+            <a href="">
+              <i className="icon-logo">
+                <svg width="97px" height="63px" viewBox="0 0 97 63">
+                  <g fill="none" fillRule="evenodd">
+                    <g transform="translate(-16, -15)" fill="#3D3D3D">
+                      <g transform="translate(16, 15)">
+                        <path d="M46.2,0 L73,0 L73,0.7159 C59.2,0.7159 59.6,5.1903 59.6,21.8352 L59.6,63 L58.5,63 L17.1,14.0497 L17.1,41.0752 C17.1,56.9147 17.2,62.1946 29.7,62.1946 L29.7,63 L2.3,63 L2.3,62.1946 C16.1,62.1946 16.2,57.1832 16.2,41.0752 L16.2,12.9758 L11.9,7.875 C5.5,0.7159 2.6,0.8949 0,0.7159 L0,0 L12.5,0 L58.7,55.3934 L58.7,21.8352 C58.7,5.1903 58.7,0.7159 46.2,0.7159 Z"></path>
+                        <path d="M71.6,62.1 L71.6,63 L54,63 L54,62.1 C58.2,62.1 58.9,60.4 58.9,54.3 L58.9,6.7 C58.9,1.1 58.4,0.8 54,0.8 L54,0 L97,0 L97,15.2 L96,15.2 C96,0.7 88,0.8 72.2,0.8 L65,0.8 L65,30.7 L74.3,30.7 C79.8,30.7 85.9,30.6 85.9,22 L86.8,22 L86.8,40.3 L85.9,40.3 C85.9,31.6 79.7,31.6 74.3,31.6 L65,31.6 L65,53.6 C65,61 67,62.1 71.6,62.1 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+<Navbar />
+          {children}
+
       </body>
     </html>
   );
