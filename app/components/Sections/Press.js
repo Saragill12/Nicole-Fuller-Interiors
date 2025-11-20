@@ -1,4 +1,3 @@
-// components/PressSection.js
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -9,17 +8,31 @@ import assets13 from "../../../public/assest/assets13.jpg";
 
 export default function PressSection() {
   return (
-    <section className="w-full bg-white ml-40 flex justify-center pt-10 pb-20">
+    <section
+      className="
+        w-full bg-white ml-40 flex justify-center pt-10 pb-20
+        max-[768px]:ml-0 max-[768px]:px-4
+      "
+    >
+      <div
+        className="
+          w-full max-w-7xl flex justify-between px-10 relative
+          max-[768px]:flex-col max-[768px]:items-center max-[768px]:px-4
+        "
+      >
 
-      <div className="w-full max-w-7xl flex justify-between px-10 relative">
-
-        {/* LEFT SIDE TEXT */}
-        <div className="w-[28%] text-black text-sm leading-relaxed pt-24">
+        <div
+          className="
+            w-[30%] text-black text-2xl leading-relaxed pt-24
+            max-[768px]:w-full max-[768px]:text-center max-[768px]:pt-5
+          "
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
+            className="-ml-35 mt-30 max-[768px]:ml-0 max-[768px]:mt-3"
           >
             Recognized in her industry as a tastemaker, Nicole Fuller cultivates  
             long standing and mutually beneficial collaborations with leading 
@@ -27,7 +40,8 @@ export default function PressSection() {
           </motion.div>
           
           <motion.div 
-            className="mt-4 font-serif tracking-wide text-lg"
+            className="mt-4 font-serif -ml-36 tracking-wide text-2xl 
+            max-[768px]:ml-0"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
@@ -37,41 +51,37 @@ export default function PressSection() {
           </motion.div>
         </div>
 
-        {/* CENTER IMAGES COLUMN */}
-        <div className="flex flex-col items-center gap-12">
-
-          {/* TOP SMALL IMAGE — slight down */}
+        <div
+          className="
+            flex flex-col items-center gap-12 ml-50
+            max-[768px]:ml-0 max-[768px]:gap-8 max-[768px]:mt-10
+          "
+        >
           <motion.div
-            initial={{ opacity: 0, y: -20 }}   // ⬇ Slightly downward
+            initial={{ opacity: 0, y: -20 }}  
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
             viewport={{ amount: 0.4, once: false }}
-            className="w-[120px] -mt-1 h-[120px]"
+            className="w-[120px] -mt-1 h-[130px] max-[768px]:w-[90px] max-[768px]:h-[100px]"
           >
-            <Image
-              src={assets11}
-              alt="Top"
-              className="w-full h-auto object-cover object-bottom"
-            />
+            <Image src={assets11} alt="Top" className="w-full h-auto object-cover object-bottom" />
           </motion.div>
 
-          {/* CENTER BIG IMAGE — slight up */}
           <motion.div
-            initial={{ opacity: 0, y: -25 }}   // ⬆ Slight upward
+            initial={{ opacity: 0, y: -25 }} 
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
             viewport={{ amount: 0.4, once: false }}
-            className="relative mt-2 w-[240px]"
+            className="relative mt-2 w-[340px] max-[768px]:w-[250px]"
           >
-            <Image
-              src={assets12}
-              alt="Center"
-              className="w-full h-auto object-cover"
-            />
+            <Image src={assets12} alt="Center" className="w-full h-auto object-cover" />
 
             <motion.h2 
-              className="absolute top-1/2 left-[-80px] -translate-y-1/2 -rotate-90 
-                text-6xl font-serif text-black leading-none"
+              className="
+                absolute top-1/2 left-[-120px] -translate-y-1/2 -rotate-90 
+                text-8xl font-serif text-black leading-none
+                max-[768px]:text-5xl max-[768px]:left-[-80px]
+              "
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
@@ -81,37 +91,36 @@ export default function PressSection() {
             </motion.h2>
           </motion.div>
 
-          {/* BOTTOM SMALL IMAGE — more up */}
           <motion.div
-            initial={{ opacity: 0, y: -40 }}   // ⬆ More upward
+            initial={{ opacity: 0, y: -40 }}  
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
             viewport={{ amount: 0.4, once: false }}
-            className="w-[100px] -mt-10"
+            className="w-[130px] -mt-10 max-[768px]:w-[100px]"
           >
-            <Image
-              src={assets13}
-              alt="Bottom"
-              className="w-full h-auto object-cover"
-            />
+            <Image src={assets13} alt="Bottom" className="w-full h-auto object-cover" />
           </motion.div>
-
         </div>
 
-        {/* RIGHT SIDE TEXT */}
-        <div className="w-[28%] text-black text-sm leading-relaxed text-left pt-24">
+        <div
+          className="
+            w-[46%] text-black text-2xl leading-relaxed pt-24
+            max-[768px]:w-full max-[768px]:text-center max-[768px]:pt-10
+          "
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: false, amount: 0.3 }}
+            className="ml-20 mt-10 max-[768px]:ml-0 max-[768px]:mt-3"
           >
             The latest press coverage on the studio,  
             our projects and our collaborations.
           </motion.div>
           
           <motion.div 
-            className="mt-4 font-serif tracking-wide text-lg"
+            className="mt-4 font-serif tracking-wide text-2xl ml-20 max-[768px]:ml-0"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}

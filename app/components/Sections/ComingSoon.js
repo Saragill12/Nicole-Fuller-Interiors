@@ -7,71 +7,82 @@ import assets15 from "../../../public/assest/assets15.jpg";
 
 export default function HomeSection() {
   return (
-    <div className="w-full min-h-screen flex ml-30 relative bg-white">
+    <div
+      className="
+        w-full min-h-screen bg-white relative
+        flex flex-col lg:flex-row  /* mobile = column, desktop = row */
+        gap-10 lg:gap-0
+        px-4 lg:ml-30
+      "
+    >
 
-      {/* LEFT SECTION */}
-      <div className="w-1/2 relative flex flex-col items-center">
+      <div className="w-full lg:w-1/2 flex flex-col items-center">
 
-        {/* IMAGE */}
-        <img 
+        <img
           src={assets14.src}
-          className="w-full h-[400px] object-cover"
+          className="w-full h-[350px] sm:h-[450px] lg:h-[600px] object-cover"
         />
 
-        {/* ✨ COMING SOON ANIMATION ✨ */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="-mt-20 ml-30"
+          className="mt-6 lg:-mt-20"
         >
-          <h1 className="text-center text-7xl font-serif mt-10">
+          <h1 className="text-center text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-serif">
             Coming soon
           </h1>
         </motion.div>
 
-        {/* SMALL PARAGRAPH */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="text-center text-xs w-[53%] mx-auto mt-4 opacity-70 leading-relaxed"
+          className="
+            text-center text-base sm:text-lg lg:text-xl opacity-70
+            w-full sm:w-[80%] lg:w-[58%] mx-auto mt-4 leading-relaxed
+          "
         >
-          A sneak peek into the projects that the studio has currently on our boards, 
+          A sneak peek into the projects that the studio has currently on our boards,
           from New York City hotels, to the Los Angeles art district.
         </motion.p>
 
-        {/* LINK */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="text-center mt-4 tracking-wide text-sm underline cursor-pointer"
+          className="text-center mt-4 tracking-wide text-lg lg:text-xl cursor-pointer"
         >
           View Projects
         </motion.p>
       </div>
 
       {/* RIGHT SECTION */}
-      <div className="w-1/2 relative flex justify-center items-center">
+      <div className="w-full lg:w-1/2 relative flex justify-center items-center">
 
-        {/* RIGHT IMAGE */}
-        <img 
+        <img
           src={assets15.src}
-          className="w-[450px] h-[600px] object-cover relative z-10"
+          className="w-full sm:w-[450px] lg:w-[650px] h-auto object-cover relative z-10"
         />
 
-        {/* ✨ ROTATED “NICOLE” TEXT — HALF INSIDE HALF OUTSIDE ✨ */}
         <motion.div
           initial={{ opacity: 0, x: -120 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="absolute left-[15px] top-1/2 -translate-y-1/2 
-                     -rotate-90 font-serif text-7xl z-20"
+          className="
+            absolute z-20 font-serif
+            text-5xl sm:text-7xl lg:text-8xl
+            top-[85%] sm:top-1/2
+            left-1/2 sm:left-[15px]
+            -translate-x-1/2 sm:-translate-x-0
+            -translate-y-0 sm:-translate-y-1/2
+
+            sm:-rotate-90   /* rotate only on big screens */
+          "
         >
           Nicole
         </motion.div>

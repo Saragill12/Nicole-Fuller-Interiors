@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import assests03 from "../../../public/assest/assets03.png";
+import assets03 from "../../../public/assest/assets03.png";
 
 export default function DistinctiveSection() {
   const slideVariant = {
@@ -11,7 +11,7 @@ export default function DistinctiveSection() {
 
   return (
     <motion.div
-      className="w-full h-full flex items-center -mt-25 -ml-40 justify-between px-24 relative z-50"
+      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-24 relative z-50"
       initial={{ opacity: 0, scale: 0.92 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
@@ -20,13 +20,13 @@ export default function DistinctiveSection() {
 
       {/* LEFT TEXT */}
       <motion.div
-        className="w-1/2 text-black leading-tight"
+        className="w-full md:w-1/2 text-black leading-tight mt-10 md:mt-0"
         initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        <h1 className="text-7xl font-light tracking-wide">
+        <h1 className="text-4xl md:text-[6.5rem] md:-ml-[8rem]  font-blod tracking-wide text-center md:text-left">
           the distinctive,<br />
           personal &<br />
           cultivated, coalesce<br />
@@ -37,31 +37,30 @@ export default function DistinctiveSection() {
 
       {/* RIGHT IMAGE */}
       <motion.div
-        className="w-1/2 h-full ml-60 flex items-center justify-center relative"
+        className="w-full md:w-1/2 h-[60vh] md:h-[100vh] flex items-center justify-center relative mt-10 md:mt-0"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <div className="w-[50rem] h-[40rem] relative">
+        <div className="relative w-full h-full">
           <Image
-            src={assests03}
+            src={assets03}
             alt="Section Image"
             fill
             className="object-cover"
-            priority
           />
 
-          {/* Portfolio Text (Now SAME animation as Studio + proper margin fix) */}
+          {/* Portfolio Text */}
           <motion.div
             variants={slideVariant}
             initial="hidden"
             whileInView="show"
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
-            className="absolute top-[30%] right-[-5rem] -translate-y-1/2 -rotate-90"
+            className="absolute top-1/2 md:top-[50%] right-[-2rem] md:right-[-11rem] -translate-y-1/2 -rotate-90"
           >
-            <span className="text-[90px] -ml-45 top-25 font-serif tracking-wide text-black">
+            <span className="text-[50px] md:text-[90px] font-serif tracking-wide text-black">
               Portfolio
             </span>
           </motion.div>

@@ -1,21 +1,19 @@
-// components/CollaborationSection.js
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import assests09 from "../../../public/assest/assets09.jpg";
+import assets09 from "../../../public/assest/assets09.jpg";
 import assets10 from "../../../public/assest/assets10.jpg";
 
 export default function CollaborationSection() {
   
-  // Shared animation for both side texts
   const slide = {
     hidden: { opacity: 0, x: -120 },
     show: { opacity: 1, x: 0 }
   };
 
   return (
-    <div className="w-screen h-screen flex overflow-hidden">
+    <div className="w-screen h-auto md:h-full flex flex-col md:flex-row overflow-hidden">
 
       {/* LEFT IMAGE */}
       <motion.div
@@ -23,16 +21,15 @@ export default function CollaborationSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.5 }}
-        className="relative w-1/3 h-full overflow-visible"
+        className="relative w-full md:w-1/3 h-64 md:h-full"
       >
         <Image
-          src={assests09}
+          src={assets09}
           alt="Left"
           fill
           className="object-cover"
         />
 
-        {/* ⭐ PRODUCTS — LEFT side half-in half-out */}
         <motion.h2
           variants={slide}
           initial="hidden"
@@ -42,10 +39,11 @@ export default function CollaborationSection() {
           className="
             absolute 
             top-1/2 
-            left-[-7rem] 
+            left-4 md:left-[-7rem] 
+            md:-translate-y-1/2 
             -translate-y-1/2 
-            -rotate-90 
-            text-7xl 
+            md:-rotate-90 
+            text-5xl sm:text-6xl md:text-8xl 
             font-serif 
             text-black 
             whitespace-nowrap 
@@ -56,8 +54,8 @@ export default function CollaborationSection() {
         </motion.h2>
       </motion.div>
 
-      {/* CENTER TEXT - WITH POPUP ANIMATION */}
-      <div className="w-1/3 h-full flex flex-col justify-center items-start px-8 bg-white">
+      {/* CENTER TEXT */}
+      <div className="w-full md:w-1/4 h-auto md:h-full flex flex-col justify-center items-start px-6 md:px-8 bg-white mt-10 md:mt-0">
         <motion.p 
           className="text-black text-base leading-[26px]"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -72,7 +70,7 @@ export default function CollaborationSection() {
 
         <motion.span 
           className="mt-4 text-lg font-serif relative cursor-pointer
-            after:block after:h-[2px] after:w-[95px] after:bg-[#B43934] after:mt-1"
+            after:block after:h-[2px] after:w-[95px] after:mt-1"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
@@ -82,8 +80,8 @@ export default function CollaborationSection() {
         </motion.span>
       </div>
 
-      {/* RIGHT IMAGE - KEEPS VISIBLE (NO ANIMATION) */}
-      <div className="relative w-1/3 h-full overflow-visible">
+      {/* RIGHT IMAGE */}
+      <div className="relative w-full md:w-1/3 h-64 md:h-full mt-10 md:mt-0">
         <Image
           src={assets10}
           alt="Right"
@@ -91,7 +89,6 @@ export default function CollaborationSection() {
           className="object-cover"
         />
 
-        {/* ⭐ COLLABORATIONS — RIGHT side half-in half-out */}
         <motion.h2
           variants={slide}
           initial="hidden"
@@ -101,10 +98,10 @@ export default function CollaborationSection() {
           className="
             absolute 
             top-1/2 
-            right-[17rem] 
+            right-4 md:right-[19rem] 
             -translate-y-1/2 
-            -rotate-90 
-            text-6xl 
+            md:-rotate-90 
+            text-5xl sm:text-6xl md:text-8xl 
             font-serif 
             text-black 
             whitespace-nowrap 

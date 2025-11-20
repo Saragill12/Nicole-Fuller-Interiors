@@ -30,11 +30,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        <div className="inner absolute top-4 left-2 z-50">
+        <div className="inner absolute top-3 left-4 z-50">
           <div className="logo">
             <a href="">
               <i className="icon-logo">
-                <svg width="97px" height="63px" viewBox="0 0 97 63">
+                <svg className="w-[8rem] h-[6rem]"  viewBox="0 0 97 63">
                   <g fill="none" fillRule="evenodd">
                     <g transform="translate(-16, -15)" fill="#3D3D3D">
                       <g transform="translate(16, 15)">

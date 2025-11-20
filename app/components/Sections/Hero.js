@@ -3,17 +3,19 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import assets02 from "../../../public/assest/assets02.jpg";
+
 export default function Intro() {
   return (
-    <section className="relative flex items-start justify-between overflow-hidden">
+    <section className="relative flex flex-col md:flex-row items-start justify-between overflow-hidden h-auto md:h-[100vh]">
 
-      <div className="z-20 ml-24 mt-28">
-
+      {/* Left Text */}
+      <div className="z-20 px-6 md:ml-24 md:mt-28 md:max-w-[50%] w-full">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
-          className="text-[78px] leading-[75px] font-light text-[#252525]"
+          className="text-5xl md:text-[7.5rem] leading-snug md:leading-[7.5rem] mt-10 font-light text-[#252525]"
+
           style={{ fontFamily: "meno-display, serif" }}
         >
           Synonymous <br />
@@ -26,7 +28,8 @@ export default function Intro() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut", delay: 0.3 }}
-          className="mt-6 ml-110 text-[16px] w-[400px] leading-[28px] text-[#333]"
+          className="-mt-[10rem] text-[20px] md:w-[25rem] md:ml-[43.5rem] leading-[33px] text-[#333]"
+
         >
           Nicole Fuller Interiors is a multi-faceted interior design firm based in
           New York City and Los Angeles, specializing in high-end residential and
@@ -37,19 +40,19 @@ export default function Intro() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-          className="flex items-center gap-2 text-[#B43934] text-2xl font-bold cursor-pointer mt-5"
+          className="flex items-center gap-2 mt-33 text-[#B43934]  text-2xl font-bold cursor-pointer mt-5"
         >
-          <span className="text-4xl">Scroll</span>
-
+          <span className="text-4xl ">Scroll</span>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-10" fill="none" viewBox="0 0 24 24" stroke="#B43934" strokeWidth={1}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </motion.div>
       </div>
 
-      <div className="absolute right-0 top-0 h-full w-[50%]">
-
-        <div className="absolute -left-80 -top-20 w-[60%] h-[130%] opacity-10 z-40">
+      {/* Right Image + SVG */}
+      <div className="relative w-full md:w-[50%] h-[100vh] md:h-[100vh] mt-10 md:mt-0">
+        {/* SVG Overlay */}
+        <div className="absolute -left-150 -top-4 w-[100%] h-full  opacity-10 z-40 hidden md:block">
           <svg viewBox="0 0 359 478" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
               <g transform="translate(-16, -171)" fill="#3D3D3D">
@@ -59,13 +62,14 @@ export default function Intro() {
           </svg>
         </div>
 
+        {/* Background Image */}
         <Image
           src={assets02}
           alt="hero"
-          className="object-cover h-full w-auto"
+          fill
+          className="object-cover"
         />
       </div>
-
     </section>
   );
 }
