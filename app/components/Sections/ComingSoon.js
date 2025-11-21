@@ -60,7 +60,6 @@ export default function HomeSection() {
         </motion.p>
       </div>
 
-      {/* RIGHT SECTION */}
       <div className="w-full lg:w-1/2 relative flex justify-center items-center">
 
         <img

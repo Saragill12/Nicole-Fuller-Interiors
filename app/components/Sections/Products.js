@@ -15,13 +15,12 @@ export default function CollaborationSection() {
   return (
     <div className="w-screen h-auto md:h-full flex flex-col md:flex-row overflow-hidden">
 
-      {/* LEFT IMAGE */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.5 }}
-        className="relative w-full md:w-1/3 h-64 md:h-full"
+        className="relative w-full md:w-1/3 h-[380px] md:h-full hidden md:block"
       >
         <Image
           src={assets09}
@@ -37,16 +36,15 @@ export default function CollaborationSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ amount: 0.4 }}
           className="
-            absolute 
+            absolute
             top-1/2 
-            left-4 md:left-[-7rem] 
-            md:-translate-y-1/2 
-            -translate-y-1/2 
-            md:-rotate-90 
-            text-5xl sm:text-6xl md:text-8xl 
-            font-serif 
-            text-black 
-            whitespace-nowrap 
+            left-[-7rem]
+            -translate-y-1/2
+            md:-rotate-90
+            text-8xl
+            font-serif
+            text-black
+            whitespace-nowrap
             z-10
           "
         >
@@ -54,7 +52,6 @@ export default function CollaborationSection() {
         </motion.h2>
       </motion.div>
 
-      {/* CENTER TEXT */}
       <div className="w-full md:w-1/4 h-auto md:h-full flex flex-col justify-center items-start px-6 md:px-8 bg-white mt-10 md:mt-0">
         <motion.p 
           className="text-black text-base leading-[26px]"
@@ -80,8 +77,7 @@ export default function CollaborationSection() {
         </motion.span>
       </div>
 
-      {/* RIGHT IMAGE */}
-      <div className="relative w-full md:w-1/3 h-64 md:h-full mt-10 md:mt-0">
+      <div className="relative w-full md:w-1/3 h-[380px] md:h-full mt-10 md:mt-0">
         <Image
           src={assets10}
           alt="Right"
@@ -96,15 +92,15 @@ export default function CollaborationSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ amount: 0.4 }}
           className="
-            absolute 
-            top-1/2 
-            right-4 md:right-[19rem] 
-            -translate-y-1/2 
-            md:-rotate-90 
-            text-5xl sm:text-6xl md:text-8xl 
-            font-serif 
-            text-black 
-            whitespace-nowrap 
+            absolute
+            top-1/2
+            right-4 md:right-[19rem]
+            -translate-y-1/2
+            md:-rotate-90
+            text-4xl sm:text-5xl md:text-8xl
+            font-serif
+            text-black
+            whitespace-nowrap
             z-10
           "
         >

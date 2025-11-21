@@ -18,7 +18,6 @@ export default function HorizontalScroll() {
   const [showRed, setShowRed] = useState(true);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  // Detect screen width
   useEffect(() => {
     const updateScreen = () => setIsDesktop(window.innerWidth >= 768);
     updateScreen();
@@ -26,13 +25,12 @@ export default function HorizontalScroll() {
     return () => window.removeEventListener("resize", updateScreen);
   }, []);
 
-  // Splash screen timeout
   useEffect(() => {
     const timer = setTimeout(() => setShowRed(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Horizontal scroll for desktop
+  
   const handleWheel = (e) => {
     if (!scrollContainerRef.current) return;
     if (isDesktop && e.deltaY !== 0) {

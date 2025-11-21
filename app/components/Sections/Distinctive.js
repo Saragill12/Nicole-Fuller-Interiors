@@ -18,7 +18,6 @@ export default function DistinctiveSection() {
       viewport={{ once: true, amount: 0.2 }}
     >
 
-      {/* LEFT TEXT */}
       <motion.div
         className="w-full md:w-1/2 text-black leading-tight mt-10 md:mt-0"
         initial={{ opacity: 0, x: -80 }}
@@ -35,7 +34,6 @@ export default function DistinctiveSection() {
         </h1>
       </motion.div>
 
-      {/* RIGHT IMAGE */}
       <motion.div
         className="w-full md:w-1/2 h-[60vh] md:h-[100vh] flex items-center justify-center relative mt-10 md:mt-0"
         initial={{ opacity: 0, x: 80 }}
@@ -51,7 +49,6 @@ export default function DistinctiveSection() {
             className="object-cover"
           />
 
-          {/* Portfolio Text */}
           <motion.div
             variants={slideVariant}
             initial="hidden"

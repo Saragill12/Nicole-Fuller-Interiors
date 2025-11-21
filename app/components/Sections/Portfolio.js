@@ -12,7 +12,6 @@ export default function ArtAdvisory() {
     <section ref={ref} className="w-full py-20 md:py-32 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-1 h-auto md:h-[70vh]">
 
-        {/* LEFT TEXT */}
         <div className="space-y-6 flex flex-col justify-center">
           <motion.p
             className="text-[18px] md:text-[21px] w-full md:w-[350px] mt-10 md:mt-40 md:-ml-40 text-[#333] leading-relaxed"
@@ -35,7 +34,6 @@ export default function ArtAdvisory() {
           </motion.a>
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="w-full h-full relative -mt-10 md:-mt-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

@@ -10,7 +10,6 @@ export default function TrendingSection() {
   return (
     <section className="relative w-screen h-auto md:h-screen flex flex-col items-center justify-center bg-white overflow-hidden px-6 md:px-8">
 
-      {/* Rotated text on left */}
       <div className="absolute md:mt-120 mt-20 md:-ml-[970px] -rotate-90 origin-left">
         <motion.span
           className="block text-4xl md:text-7xl font-serif font-light text-neutral-900"
@@ -40,7 +39,6 @@ export default function TrendingSection() {
         </motion.span>
       </div>
 
-      {/* Cards */}
       <div className="flex flex-wrap justify-center gap-6 ml-20 md:gap-8 max-w-[calc(100vw-2rem)] mt-32 md:mt-16">
 
         {[assets06, assets07, assets08].map((asset, i) => {

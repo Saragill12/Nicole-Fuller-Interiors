@@ -8,7 +8,6 @@ export default function Intro() {
   return (
     <section className="relative flex flex-col md:flex-row items-start justify-between overflow-hidden h-auto md:h-[100vh]">
 
-      {/* Left Text */}
       <div className="z-20 px-6 md:ml-24 md:mt-28 md:max-w-[50%] w-full">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -49,9 +48,7 @@ export default function Intro() {
         </motion.div>
       </div>
 
-      {/* Right Image + SVG */}
       <div className="relative w-full md:w-[50%] h-[100vh] md:h-[100vh] mt-10 md:mt-0">
-        {/* SVG Overlay */}
         <div className="absolute -left-150 -top-4 w-[100%] h-full  opacity-10 z-40 hidden md:block">
           <svg viewBox="0 0 359 478" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
@@ -62,7 +59,6 @@ export default function Intro() {
           </svg>
         </div>
 
-        {/* Background Image */}
         <Image
           src={assets02}
           alt="hero"
