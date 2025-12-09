@@ -59,7 +59,7 @@ export default function ArtAdvisory() {
             Art Advisory
           </motion.h2>
 
-          <div className="mt-6 md:mt-15 text-center max-w-[500px] mx-auto px-4 md:px-0">
+          <div className="mt-6 md:mt-1 text-center max-w-[500px] mx-auto px-4 md:px-0">
             <motion.p
               className="text-[13px] text-[#333] leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export default function ArtAdvisory() {
 
             <motion.a
               href="#"
-              className="inline-block text-xl md:text-2xl mt-3 font-semibold text-black pb-1"
+              className="inline-block text-xl md:text-2xl mt-1 font-semibold text-black pb-1"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.5 }}

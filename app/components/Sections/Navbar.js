@@ -6,15 +6,12 @@ export default function LuxuryMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    "Interiors",
-    "Nicole",
-    "The Studio",
+    "Spaces ",
     "Art Advisory",
-    "Trending",
-    "Products",
-    "Collaborations",
-    "Press",
-    "In Progress",
+    "Product",
+    "About",
+    "Contact",
+  
   ];
 
   const splitLetters = (text) => {

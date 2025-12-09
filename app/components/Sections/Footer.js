@@ -101,7 +101,7 @@ export default function NicolePage() {
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
       >
         <p>Site by</p>
-        <p className="tracking-[0.1em] mt-2">© 2 0 2 5</p>
+        <p className="tracking-[0.1em] ">© 2 0 2 5</p>
       </motion.div>
 
     </div>
