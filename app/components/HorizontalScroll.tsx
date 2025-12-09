@@ -3,38 +3,43 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import Hero from "../components/Sections/Hero";
+import Hero from "./Sections/Hero";
 import Distinctive from "./Sections/Distinctive";
-import Services from "../components/Sections/Services";
-import Portfolio from "../components/Sections/Portfolio";
-import Contact from "../components/Sections/Contact";
+import Services from "./Sections/Services";
+import Portfolio from "./Sections/Portfolio";
+import Contact from "./Sections/Contact";
 import Product from "@/app/components/Sections/Products";
 import Press from "@/app/components/Sections/Press";
-import ComingSoon from "../components/Sections/ComingSoon";
-import Footer from "../components/Sections/Footer";
+import ComingSoon from "./Sections/ComingSoon";
+import Footer from "./Sections/Footer";
 
 export default function HorizontalScroll() {
-  const scrollContainerRef = useRef(null);
-  const [showRed, setShowRed] = useState(true);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
+  const [showRed, setShowRed] = useState<boolean>(true);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
+  // Detect desktop
   useEffect(() => {
     const updateScreen = () => setIsDesktop(window.innerWidth >= 768);
     updateScreen();
+
     window.addEventListener("resize", updateScreen);
     return () => window.removeEventListener("resize", updateScreen);
   }, []);
 
+  // Red intro timer
   useEffect(() => {
     const timer = setTimeout(() => setShowRed(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
+  // Horizontal scroll logic (desktop only)
   useEffect(() => {
     const el = scrollContainerRef.current;
     if (!el) return;
 
-    const wheelHandler = (e) => {
+    const wheelHandler = (e: WheelEvent) => {
       if (isDesktop && e.deltaY !== 0) {
         e.preventDefault();
         el.scrollLeft += e.deltaY;
@@ -65,11 +70,13 @@ export default function HorizontalScroll() {
       <div
         ref={scrollContainerRef}
         className={`scrollbar-none flex h-screen w-screen ${
-          isDesktop ? "flex-row overflow-x-auto snap-x snap-mandatory" : "flex-col overflow-y-auto"
+          isDesktop
+            ? "flex-row overflow-x-auto snap-x snap-mandatory"
+            : "flex-col overflow-y-auto"
         }`}
         style={{ scrollBehavior: "smooth" }}
       >
-        {/* Each section takes exactly h-screen and min-w-full to avoid extra space */}
+        {/* Each section takes exactly h-screen and min-w-full */}
         <section className="min-w-full h-screen snap-start overflow-hidden">
           <Hero />
         </section>
