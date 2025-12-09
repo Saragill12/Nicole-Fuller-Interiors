@@ -13,7 +13,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
-          className="text-5xl md:text-[7.5rem] leading-snug md:leading-[7.5rem] mt-10 font-light text-[#252525]"
+          className="text-5xl md:text-[5rem] leading-snug md:leading-[5rem]  font-light text-[#252525]"
 
           style={{ fontFamily: "meno-display, serif" }}
         >
