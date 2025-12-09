@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import assets02 from "../../../public/assest/assets02.jpg";
+// import assets02 from "../../../public/assest/assets02.jpg";
 
 export default function Intro() {
   return (
