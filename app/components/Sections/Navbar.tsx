@@ -17,18 +17,24 @@ const splitLetters = (text: string) => text.split("");
 export default function LuxuryMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Letter animation
+  const easeStandard = [0.4, 0, 0.2, 1];
+
   const letterVariants = {
     initial: { y: 50, opacity: 0, color: "#1A1A1A" },
-    animate: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: easeStandard },
+    },
     hover: {
       y: [-5, 5, -3, 3, 0],
       color: "#3D3D3D",
-      transition: { duration: 0.6, repeat: Infinity },
+      transition: { duration: 0.6, repeat: Infinity, ease: easeStandard },
     },
   };
 
   const wordVariants = {
+    initial: {},
     animate: { transition: { staggerChildren: 0.05 } },
   };
 
@@ -55,7 +61,7 @@ export default function LuxuryMenu() {
               initial={{ x: "-100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "-100%", opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.5, ease: easeStandard }}
               className="h-full w-[600px] bg-[#E7E1D8] p-12 md:p-16 relative border-r border-[#d7d1c8] flex-shrink-0"
             >
               <div
@@ -80,6 +86,8 @@ export default function LuxuryMenu() {
                           key={i}
                           variants={letterVariants}
                           whileHover="hover"
+                          initial="initial"
+                          animate="animate"
                           className="inline-block"
                         >
                           {letter}
@@ -95,7 +103,7 @@ export default function LuxuryMenu() {
             <div
               className="flex-1 bg-transparent"
               onClick={() => setIsOpen(false)}
-            ></div>
+            />
           </motion.div>
         )}
       </AnimatePresence>
