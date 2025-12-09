@@ -64,3 +64,18 @@ html, body {
   0% { transform: translateY(0); }
   100% { transform: translateY(5px); }
 }
+/* Completely remove extra horizontal space */
+html, body {
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar everywhere */
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+}
+.scrollbar-none {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
