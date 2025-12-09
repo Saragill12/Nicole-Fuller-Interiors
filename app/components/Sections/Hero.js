@@ -13,7 +13,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
-          className="text-5xl md:text-[7.5rem] leading-snug md:leading-[7.5rem] mt-10 font-light text-[#252525]"
+          className="text-5xl md:text-[6rem] leading-snug md:leading-[5.5rem] -mt-4 font-light text-[#252525]"
 
           style={{ fontFamily: "meno-display, serif" }}
         >
@@ -27,7 +27,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut", delay: 0.3 }}
-          className="-mt-[10rem] text-[20px] md:w-[25rem] md:ml-[43.5rem] leading-[33px] text-[#333]"
+          className="-mt-[10rem] text-[20px] md:w-[25rem] md:ml-[43.5rem]   leading-[33px] text-[#333]"
 
         >
           Nicole Fuller Interiors is a multi-faceted interior design firm based in
@@ -39,9 +39,9 @@ export default function Intro() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-          className="flex items-center gap-2 mt-33 text-[#B43934]  text-2xl font-bold cursor-pointer mt-5"
+          className="flex items-center gap-2 -mt-33 text-[#B43934]  text-2xl font-bold cursor-pointer mt-5"
         >
-          <span className="text-4xl ">Scroll</span>
+          <span className="text-4xl -mt-5 ">Scroll</span>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-10" fill="none" viewBox="0 0 24 24" stroke="#B43934" strokeWidth={1}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -49,7 +49,7 @@ export default function Intro() {
       </div>
 
       <div className="relative w-full md:w-[50%] h-[100vh] md:h-[100vh] mt-10 md:mt-0">
-        <div className="absolute -left-150 -top-4 w-[100%] h-full  opacity-10 z-40 hidden md:block">
+        <div className="absolute -left-50 -top-4 w-[100%] h-full  opacity-10 z-40 hidden md:block">
           <svg viewBox="0 0 359 478" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
               <g transform="translate(-16, -171)" fill="#3D3D3D">
@@ -63,7 +63,7 @@ export default function Intro() {
           src={assets02}
           alt="hero"
           fill
-          className="object-cover"
+          className="object-cover "
         />
       </div>
     </section>
