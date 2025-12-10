@@ -7,20 +7,14 @@ import assets15 from "../../../public/assest/assets15.jpg";
 
 export default function HomeSection() {
   return (
-    <div
-      className="
-        w-full min-h-screen bg-white relative
-        flex flex-col lg:flex-row  /* mobile = column, desktop = row */
-        gap-10 lg:gap-0
-        px-4 lg:ml-30
-      "
-    >
+    <div className="w-full min-h-screen bg-white relative flex flex-col lg:flex-row gap-10 lg:gap-0 px-4 lg:ml-30">
 
+      {/* LEFT TEXT/IMAGE */}
       <div className="w-full lg:w-1/2 flex flex-col items-center">
 
         <img
           src={assets14.src}
-          className="w-full h-[350px] sm:h-[450px] lg:h-[400px] object-cover"
+          className="w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[400px] object-cover sm:-ml-0 md:-ml-0 lg:-ml-50"
         />
 
         <motion.div
@@ -30,7 +24,7 @@ export default function HomeSection() {
           viewport={{ once: false, amount: 0.4 }}
           className="mt-6 lg:-mt-10"
         >
-          <h1 className="text-center text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-serif">
+          <h1 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-serif">
             Coming soon
           </h1>
         </motion.div>
@@ -40,10 +34,7 @@ export default function HomeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="
-            text-center text-base sm:text-lg lg:text-xl opacity-70
-            w-full sm:w-[80%] lg:w-[58%] mx-auto mt-1 leading-relaxed
-          "
+          className="text-center text-sm sm:text-base md:text-lg lg:text-xl opacity-70 w-full sm:w-[90%] md:w-[80%] lg:w-[58%] mx-auto mt-1 leading-relaxed"
         >
           A sneak peek into the projects that the studio has currently on our boards,
           from New York City hotels, to the Los Angeles art district.
@@ -54,17 +45,18 @@ export default function HomeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="text-center -mt-1 tracking-wide text-lg lg:text-xl cursor-pointer"
+          className="text-center -mt-1 tracking-wide text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer"
         >
           View Projects
         </motion.p>
       </div>
 
-      <div className="w-full lg:w-1/2 relative flex justify-center items-center">
+      {/* RIGHT IMAGE */}
+      <div className="w-full lg:w-1/2 relative flex justify-center items-center mt-10 lg:mt-0">
 
         <img
           src={assets15.src}
-          className="w-full sm:w-[450px] -mt-40  lg:w-[650px] h-auto object-cover relative z-10"
+          className="w-full sm:w-[350px] md:w-[450px] lg:w-[650px] -mt-10 sm:-mt-5 md:-mt-10 lg:-mt-40 h-auto object-cover relative z-10"
         />
 
         <motion.div
@@ -74,13 +66,12 @@ export default function HomeSection() {
           viewport={{ once: false, amount: 0.4 }}
           className="
             absolute z-20 font-serif
-            text-5xl sm:text-7xl lg:text-8xl
-            top-[85%] sm:top-1/2
-            left-1/2 sm:left-[15px]
-            -translate-x-1/2 sm:-translate-x-0
-            -translate-y-0 sm:-translate-y-1/2
-
-            sm:-rotate-90
+            text-4xl sm:text-5xl md:text-7xl lg:text-8xl
+            top-[85%] sm:top-[80%] md:top-1/2 lg:top-1/2
+            left-1/2 sm:left-[50%] md:-left-[80px] lg:-left-[120px]
+            -translate-x-1/2 sm:-translate-x-1/2 md:-translate-x-0 lg:-translate-x-0
+            -translate-y-0 sm:-translate-y-0 md:-translate-y-1/2 lg:-translate-y-1/2
+            sm:-rotate-0 md:-rotate-90 lg:-rotate-90
           "
         >
           Nicole

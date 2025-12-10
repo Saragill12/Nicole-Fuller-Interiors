@@ -15,6 +15,7 @@ export default function CollaborationSection() {
   return (
     <div className="w-screen h-auto md:h-full flex flex-col md:flex-row overflow-hidden">
 
+      {/* LEFT IMAGE (Desktop only) */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -38,7 +39,7 @@ export default function CollaborationSection() {
           className="
             absolute
             top-1/2 
-            left-[-7rem]
+            left-[-10rem]
             -translate-y-1/2
             md:-rotate-90
             text-8xl
@@ -52,21 +53,22 @@ export default function CollaborationSection() {
         </motion.h2>
       </motion.div>
 
+      {/* CENTER TEXT */}
       <div className="w-full md:w-1/4 h-auto md:h-full flex flex-col justify-center items-start px-6 md:px-8 bg-white mt-10 md:mt-0">
         <motion.p 
-          className="text-black text-base leading-[26px]"
+          className="text-black text-base leading-[26px] md:text-base"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           Having spent her career designing bespoke interiors for discerning clientele,
-          Nicole Fuller's furniture and object collection puts her exacting eye towards
+          Nicole Fuller&apos;s furniture and object collection puts her exacting eye towards
           a series of one-of-a-kind pieces.
         </motion.p>
 
         <motion.span 
-          className="mt-4 text-lg font-serif relative cursor-pointer
+          className="mt-4 text-lg md:text-lg font-serif relative cursor-pointer
             after:block after:h-[2px] after:w-[95px] after:mt-1"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -77,6 +79,7 @@ export default function CollaborationSection() {
         </motion.span>
       </div>
 
+      {/* RIGHT IMAGE */}
       <div className="relative w-full md:w-1/3 h-[380px] md:h-full mt-10 md:mt-0">
         <Image
           src={assets10}
@@ -94,7 +97,7 @@ export default function CollaborationSection() {
           className="
             absolute
             top-1/2
-            right-4 md:right-[19rem]
+            right-4 md:right-[8rem]
             -translate-y-1/2
             md:-rotate-90
             text-4xl sm:text-5xl md:text-8xl

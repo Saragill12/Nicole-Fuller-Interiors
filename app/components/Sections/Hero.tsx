@@ -8,48 +8,63 @@ export default function Intro() {
   return (
     <section className="relative flex flex-col md:flex-row items-start justify-between overflow-hidden h-auto md:h-[100vh]">
 
-      <div className="z-20 px-6 md:ml-24 md:mt-28 md:max-w-[50%] w-full">
+      {/* LEFT CONTENT */}
+      <div className="z-20 px-4 sm:px-6 md:ml-24 md:mt-28 w-full mt-6">
+
+        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
-          className="text-5xl md:text-[6rem] leading-snug md:leading-[5.5rem] -mt-4 font-light text-[#252525]"
-
+          className="
+            text-2xl sm:text-3xl md:text-[6.2rem]
+            leading-[2.2rem] sm:leading-[2.8rem] md:leading-[6.8rem]
+            font-light text-[#252525]
+          "
           style={{ fontFamily: "meno-display, serif" }}
         >
           Synonymous <br />
-          with <em>sophisticated</em>, <br />
+          with sophisticated, <br />
           & nuanced <br />
           <em>luxury</em>
         </motion.h1>
 
+        {/* Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut", delay: 0.3 }}
-          className="-mt-[10rem] text-[20px] md:w-[25rem] md:ml-[43.5rem]   leading-[33px] text-[#333]"
-
+          className="
+            mt-4 sm:mt-6
+            text-[13px] sm:text-[14px]
+            leading-[20px] sm:leading-[24px]
+            text-[#333]
+            w-full
+            md:w-[22rem] md:ml-[31.5rem] md:-mt-[11.2rem]
+          "
         >
-          Nicole Fuller Interiors is a multi-faceted interior design firm based in
-          New York City and Los Angeles, specializing in high-end residential and
-          commercial design projects in the US and abroad.
+          Nicole Fuller Interiors is a multi-faceted interior design firm based in New York City and Los Angeles, specializing in high-end residential and commercial projects.
         </motion.p>
 
+        {/* Scroll Arrow */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-          className="flex items-center gap-2 -mt-33 text-[#B43934]  text-2xl font-bold cursor-pointer mt-5"
+          className="flex items-center gap-2 mt-6 sm:mt-8 md:mt-20 text-[#B43934] text-lg sm:text-xl md:text-2xl font-bold cursor-pointer"
         >
-          <span className="text-4xl -mt-5 ">Scroll</span>
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10" fill="none" viewBox="0 0 24 24" stroke="#B43934" strokeWidth={1}>
+          <span className="text-sm sm:text-lg md:text-xl">Scroll</span>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 sm:h-7 md:h-10" fill="none" viewBox="0 0 24 24" stroke="#B43934" strokeWidth={1}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </motion.div>
       </div>
 
-      <div className="relative w-full md:w-[50%] h-[100vh] md:h-[100vh] mt-10 md:mt-0">
-        <div className="absolute -left-50 -top-4 w-[100%] h-full  opacity-10 z-40 hidden md:block">
+      {/* RIGHT IMAGE */}
+      <div className="relative w-full md:w-[55%] h-[40vh] sm:h-[55vh] md:h-[100vh] mt-6 md:mt-0">
+
+        {/* SVG ONLY ON DESKTOP */}
+        <div className="absolute -left-40 sm:-left-60 md:-left-80 -top-1 w-[110%] h-full opacity-10 z-40 hidden md:block">
           <svg viewBox="0 0 359 478" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
               <g transform="translate(-16, -171)" fill="#3D3D3D">
@@ -63,9 +78,10 @@ export default function Intro() {
           src={assets02}
           alt="hero"
           fill
-          className="object-cover "
+          className="object-cover rounded-md sm:rounded-lg md:rounded-none"
         />
       </div>
+
     </section>
   );
 }
