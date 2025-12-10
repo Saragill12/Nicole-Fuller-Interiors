@@ -18,7 +18,7 @@ export default function Services() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.4 }}
           >
-            Nicole's residential projects span from coast to coast,
+            Nicole&apos;s residential projects span from coast to coast,
             major European cities and the rural English countryside,
             and her commercial spaces are as diverse. Recent and current
             projects include the Art District Hotel in Downtown Los Angeles,
@@ -60,7 +60,7 @@ export default function Services() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
         >
-          <span className="text-[50px] md:text-[110px] font-serif tracking-wide text-black">
+          <span className="text-[50px] md:text-[110px]  font-serif tracking-wide text-black">
             Studio
           </span>
         </motion.div>

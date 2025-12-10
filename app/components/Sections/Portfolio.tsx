@@ -14,7 +14,7 @@ export default function ArtAdvisory() {
 
         <div className="space-y-6 flex flex-col justify-center">
           <motion.p
-            className="text-[18px] md:text-[21px] w-full md:w-[350px] mt-10 md:mt-40 md:-ml-40 text-[#333] leading-relaxed"
+            className="text-[18px] md:text-[21px] w-full md:w-[350px]  -mt-4 md:mt-40 md:-ml-25 text-[#333] leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6 }}
@@ -25,7 +25,7 @@ export default function ArtAdvisory() {
 
           <motion.a
             href="#"
-            className="inline-block text-2xl md:text-3xl mt-2 md:mt-0 font-semibold text-black pb-1 md:-ml-40"
+            className="inline-block text-2xl md:text-3xl mt-2 md:mt-0 font-semibold text-black pb-1 md:-ml-25"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -39,7 +39,7 @@ export default function ArtAdvisory() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.6 }}
-            className="w-[120%] md:w-[120%] h-[250px] md:h-full relative -mt-0 md:-mt-10 -ml-6 md:-ml-10 overflow-hidden mx-auto"
+            className="w-[120%] md:w-[95%] h-[200px] md:h-full relative -mt-0 md:-mt-10 -ml-6 md:-ml-10 overflow-hidden mx-auto"
           >
             <Image
               src={assets05}
@@ -59,7 +59,7 @@ export default function ArtAdvisory() {
             Art Advisory
           </motion.h2>
 
-          <div className="mt-6 md:mt-15 text-center max-w-[500px] mx-auto px-4 md:px-0">
+          <div className="mt-6 md:mt-5 text-center max-w-[500px] mx-auto px-4 md:px-0">
             <motion.p
               className="text-[13px] text-[#333] leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
