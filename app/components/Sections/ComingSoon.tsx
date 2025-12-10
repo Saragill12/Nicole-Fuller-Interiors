@@ -20,7 +20,7 @@ export default function HomeSection() {
 
         <img
           src={assets14.src}
-          className="w-full h-[350px] sm:h-[450px] lg:h-[600px] object-cover"
+          className="w-full h-[350px] sm:h-[450px] lg:h-[400px] object-cover"
         />
 
         <motion.div
@@ -28,9 +28,9 @@ export default function HomeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="mt-6 lg:-mt-20"
+          className="mt-6 lg:-mt-10"
         >
-          <h1 className="text-center text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-serif">
+          <h1 className="text-center text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-serif">
             Coming soon
           </h1>
         </motion.div>
@@ -42,7 +42,7 @@ export default function HomeSection() {
           viewport={{ once: false, amount: 0.4 }}
           className="
             text-center text-base sm:text-lg lg:text-xl opacity-70
-            w-full sm:w-[80%] lg:w-[58%] mx-auto mt-4 leading-relaxed
+            w-full sm:w-[80%] lg:w-[58%] mx-auto mt-1 leading-relaxed
           "
         >
           A sneak peek into the projects that the studio has currently on our boards,
@@ -54,7 +54,7 @@ export default function HomeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
-          className="text-center mt-4 tracking-wide text-lg lg:text-xl cursor-pointer"
+          className="text-center -mt-1 tracking-wide text-lg lg:text-xl cursor-pointer"
         >
           View Projects
         </motion.p>
@@ -64,7 +64,7 @@ export default function HomeSection() {
 
         <img
           src={assets15.src}
-          className="w-full sm:w-[450px] lg:w-[650px] h-auto object-cover relative z-10"
+          className="w-full sm:w-[450px] -mt-40  lg:w-[650px] h-auto object-cover relative z-10"
         />
 
         <motion.div
@@ -80,7 +80,7 @@ export default function HomeSection() {
             -translate-x-1/2 sm:-translate-x-0
             -translate-y-0 sm:-translate-y-1/2
 
-            sm:-rotate-90   /* rotate only on big screens */
+            sm:-rotate-90
           "
         >
           Nicole

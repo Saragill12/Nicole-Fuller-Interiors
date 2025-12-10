@@ -25,7 +25,7 @@ export default function DistinctiveSection() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        <h1 className="text-4xl md:text-[6.5rem] md:-ml-[8rem]  font-blod tracking-wide text-center md:text-left">
+        <h1 className="text-4xl md:text-[5rem] md:-ml-[6rem]  font-blod tracking-wide text-center md:text-left">
           the distinctive,<br />
           personal &<br />
           cultivated, coalesce<br />

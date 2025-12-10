@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion"; // <-- FIX (Variants added)
 import Link from "next/link";
 
 const menuItems = [
@@ -14,23 +14,33 @@ const menuItems = [
 
 const splitLetters = (text: string) => text.split("");
 
+// ----------------------
+// FIXED VARIANTS — WITH TYPES
+// ----------------------
+const letterVariants: Variants = {
+  initial: { y: 50, opacity: 0, color: "#1A1A1A" },
+  animate: {
+    y: 0,
+    opacity: 1,
+    color: "#1A1A1A",
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+  hover: {
+    y: [-5, 5, -3, 3, 0],
+    color: "#3D3D3D",
+    transition: { duration: 0.6, repeat: Infinity },
+  },
+};
+
+const wordVariants: Variants = {
+  initial: {},
+  animate: {
+    transition: { staggerChildren: 0.05 },
+  },
+};
+
 export default function LuxuryMenu() {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Letter animation
-  const letterVariants = {
-    initial: { y: 50, opacity: 0, color: "#1A1A1A" },
-    animate: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
-    hover: {
-      y: [-5, 5, -3, 3, 0],
-      color: "#3D3D3D",
-      transition: { duration: 0.6, repeat: Infinity },
-    },
-  };
-
-  const wordVariants = {
-    animate: { transition: { staggerChildren: 0.05 } },
-  };
 
   return (
     <>
@@ -91,7 +101,7 @@ export default function LuxuryMenu() {
               </div>
             </motion.div>
 
-            {/* RIGHT OVERLAY CLICK TO CLOSE */}
+            {/* RIGHT OVERLAY CLOSE */}
             <div
               className="flex-1 bg-transparent"
               onClick={() => setIsOpen(false)}

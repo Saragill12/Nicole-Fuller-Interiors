@@ -28,13 +28,13 @@ export default function HorizontalScroll() {
     return () => window.removeEventListener("resize", updateScreen);
   }, []);
 
-  // Red intro timer
+  // Red intro hide timer
   useEffect(() => {
     const timer = setTimeout(() => setShowRed(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Horizontal scroll logic (desktop only)
+  // Horizontal scroll (desktop only)
   useEffect(() => {
     const el = scrollContainerRef.current;
     if (!el) return;
@@ -51,7 +51,7 @@ export default function HorizontalScroll() {
   }, [isDesktop]);
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen w-screen overflow-hidden overscroll-none">
 
       {/* RED INTRO */}
       {showRed && (
@@ -62,21 +62,21 @@ export default function HorizontalScroll() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 2.5 }}
         >
-          {/* Red intro animation content */}
+          {/* INTRO ANIMATION */}
         </motion.div>
       )}
 
-      {/* HORIZONTAL SCROLL CONTAINER */}
+      {/* MAIN SCROLL CONTAINER */}
       <div
         ref={scrollContainerRef}
-        className={`scrollbar-none flex h-screen w-screen ${
+        className={`scrollbar-none flex h-screen w-screen overflow-y-hidden overscroll-none ${
           isDesktop
             ? "flex-row overflow-x-auto snap-x snap-mandatory"
             : "flex-col overflow-y-auto"
         }`}
         style={{ scrollBehavior: "smooth" }}
       >
-        {/* Each section takes exactly h-screen and min-w-full */}
+
         <section className="min-w-full h-screen snap-start overflow-hidden">
           <Hero />
         </section>
@@ -112,6 +112,7 @@ export default function HorizontalScroll() {
         <section className="min-w-full h-screen snap-start overflow-hidden">
           <Footer />
         </section>
+
       </div>
     </div>
   );
