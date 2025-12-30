@@ -8,10 +8,10 @@ export default function Services() {
     <div className="h-screen flex flex-col md:flex-row overflow-hidden">
 
       {/* LEFT TEXT */}
-      <div className="relative flex-1 flex flex-col justify-center px-6 md:px-16 mt-10 md:mt-0">
+      <div className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-16 mt-6 md:mt-0">
         <div className="md:ml-0">
           <motion.p 
-            className="text-[18px] sm:text-[16px] leading-[24px] text-[#333] w-full md:w-[345px]"
+            className="text-[14px] sm:text-[15px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[24px] text-[#333] w-full md:w-[345px]"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -27,8 +27,8 @@ export default function Services() {
           </motion.p>
 
           <motion.div 
-            className="mt-4 text-black font-serif text-[24px] sm:text-[20px] tracking-wide relative cursor-pointer
-                       after:block after:w-[95px] after:bg-[#B43934] after:mt-1"
+            className="mt-4 text-black font-serif text-[18px] sm:text-[20px] md:text-[24px] tracking-wide relative cursor-pointer
+                       after:block after:w-[70px] sm:after:w-[85px] md:after:w-[95px] after:bg-[#B43934] after:mt-1"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -41,7 +41,7 @@ export default function Services() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="w-full md:w-[55%] h-[60vh] md:h-full relative mt-10 md:mt-0">
+      <div className="w-full md:w-[55%] h-[45vh] sm:h-[55vh] md:h-full relative mt-6 md:mt-0">
 
         <div className="w-full h-full relative">
           <Image
@@ -53,14 +53,14 @@ export default function Services() {
         </div>
 
         <motion.div
-          className="absolute -rotate-90 top-[40%] left-[-35%] md:top-[70%] md:left-[-20%] transform -translate-y-1/2"
+          className="absolute -rotate-90 top-[35%] sm:top-[40%] md:top-[50%] left-[-30%] sm:left-[-32%] md:left-[-20%] transform -translate-y-1/2"
           initial={{ opacity: 0, x: -100 }}   
           whileInView={{ opacity: 1, x: 0 }}  
           exit={{ opacity: 0, x: -100 }}     
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.4 }}
         >
-          <span className="text-[50px] sm:text-[40px] md:text-[90px] font-serif tracking-wide text-black">
+          <span className="text-[35px] sm:text-[40px] md:text-[90px] font-serif tracking-wide text-black">
             Studio
           </span>
         </motion.div>
