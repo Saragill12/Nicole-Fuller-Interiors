@@ -17,7 +17,6 @@ export default function DistinctiveSection() {
       transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
       viewport={{ once: true, amount: 0.2 }}
     >
-
       {/* LEFT TEXT */}
       <motion.div
         className="w-full md:w-1/2 text-black leading-tight mt-6 md:mt-0"
@@ -26,7 +25,7 @@ export default function DistinctiveSection() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        <h1 className="text-2xl sm:text-3xl md:text-4xl md:text-[5rem]  tracking-wide text-center md:text-left md:-ml-[6rem]">
+        <h1 className="text-[1.5rem] sm:text-[1.75rem] md:text-[5rem] leading-[1.8rem] sm:leading-[2.2rem] md:leading-[6rem] tracking-wide text-center md:text-left md:-ml-[6rem]">
           the distinctive,<br />
           personal &<br />
           cultivated, coalesce<br />
@@ -43,7 +42,7 @@ export default function DistinctiveSection() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <div className="relative w-full sm:ml-4 md:ml-20 h-full">
+        <div className="relative w-full sm:ml-2 md:ml-20 h-full">
           <Image
             src={assets03}
             alt="Section Image"
@@ -57,15 +56,14 @@ export default function DistinctiveSection() {
             whileInView="show"
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
-            className="absolute top-1/2 md:top-[50%] right-0 sm:right-[-1rem] md:right-[-11rem] -translate-y-1/2 -rotate-90"
+            className="absolute top-1/2 md:top-[50%] right-0 sm:right-[-0.5rem] md:right-[-11rem] -translate-y-1/2 -rotate-90"
           >
-            <span className="text-3xl sm:text-4xl md:text-[90px] font-serif tracking-wide text-black">
+            <span className="text-xl sm:text-2xl md:text-[90px] font-serif tracking-wide text-black">
               Portfolio
             </span>
           </motion.div>
         </div>
       </motion.div>
-
     </motion.div>
   );
 }

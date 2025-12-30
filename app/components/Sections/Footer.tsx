@@ -26,7 +26,7 @@ export default function NicolePage() {
       </motion.div>
 
       {/* BIO */}
-      <div className="w-full sm:w-[300px] md:w-[350px] mt-32 sm:mt-24 md:mt-28 px-2 sm:px-0">
+      <div className="w-full sm:w-[300px] md:w-[350px] mt-32 ml-20 sm:mt-24 md:mt-28 px-2 sm:px-0">
         <motion.p
           className="text-[14px] sm:text-[15px] md:text-base leading-relaxed text-neutral-800"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -36,7 +36,7 @@ export default function NicolePage() {
           Nicole Fuller, founder and principle of Nicole Fuller Interiors, is an
           internationally acclaimed interior designer renowned for her artfully
           appointed, one of a kind residential and commercial spaces. A member of
-          ELLE Decor magazine's coveted A-List and Luxe magazine's Gold List, Nicole's
+          ELLE Decor magazine&lsquo;s coveted A-List and Luxe magazine&lsquo;s Gold List, Nicole&lsquo;s
           work is synonymous with sophisticated, nuanced luxury, where attention to
           detail, savoir faire, and a cultivated eye culminate in spaces that are as
           singular as her clients.
@@ -56,10 +56,11 @@ export default function NicolePage() {
       <div
         className="
           absolute 
-          right-4 sm:right-10 
+          right-4 sm:right-10  
           top-[45%] sm:top-1/3 
           flex flex-col items-center sm:items-center 
           space-y-4 sm:space-y-6
+          gap-14
         "
       >
         <motion.span
@@ -72,7 +73,7 @@ export default function NicolePage() {
         </motion.span>
 
         <motion.span
-          className="text-xs sm:text-sm tracking-[0.15em] rotate-0 sm:rotate-90"
+          className="text-xs sm:text-sm tracking-[0.15em]   rotate-0 sm:rotate-90"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.3 }}

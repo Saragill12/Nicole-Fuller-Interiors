@@ -9,10 +9,10 @@ import assets13 from "../../../public/assest/assets13.jpg";
 export default function PressSection() {
   return (
     <section className="w-full bg-white flex justify-center pt-10 pb-20 px-4 md:px-0">
-      <div className="w-full max-w-7xl flex justify-between relative flex-col md:flex-row items-center md:items-start">
+      <div className="w-full max-w-7xl flex flex-col md:flex-row items-center md:items-start justify-between relative">
 
         {/* LEFT TEXT */}
-        <div className="w-full md:w-[30%] text-black text-2xl leading-relaxed pt-5 md:pt-24 text-center md:text-left">
+        <div className="w-full md:w-[30%] text-black text-2xl leading-relaxed pt-5 md:pt-24 text-center md:text-left order-2 md:order-1">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -36,7 +36,7 @@ export default function PressSection() {
         </div>
 
         {/* CENTER IMAGES */}
-        <div className="flex flex-col items-center gap-12 mt-10 md:ml-50 md:mt-0">
+        <div className="flex flex-col items-center gap-12 mt-10 md:ml-50 md:mt-0 order-1 md:order-2">
           <motion.div
             initial={{ opacity: 0, y: -20 }}  
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function PressSection() {
         </div>
 
         {/* RIGHT TEXT */}
-        <div className="w-full md:w-[46%] text-black text-2xl leading-relaxed pt-10 md:pt-24 text-center md:text-left">
+        <div className="w-full md:w-[46%] text-black text-2xl leading-relaxed pt-10 md:pt-24 text-center md:text-left order-3 md:order-3">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}

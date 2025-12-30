@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -14,105 +13,117 @@ import ComingSoon from "./Sections/ComingSoon";
 import Footer from "./Sections/Footer";
 
 export default function HorizontalScroll() {
-  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [showRed, setShowRed] = useState(true);
 
-  const [showRed, setShowRed] = useState<boolean>(true);
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
-  // Detect desktop
+  // Detect screen size
   useEffect(() => {
-    const updateScreen = () => setIsDesktop(window.innerWidth >= 768);
-    updateScreen();
-
-    window.addEventListener("resize", updateScreen);
-    return () => window.removeEventListener("resize", updateScreen);
+    const update = () => setIsDesktop(window.innerWidth >= 1024);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
-  // Red intro hide timer
+  // Remove red intro
   useEffect(() => {
-    const timer = setTimeout(() => setShowRed(false), 3000);
-    return () => clearTimeout(timer);
+    const t = setTimeout(() => setShowRed(false), 2500);
+    return () => clearTimeout(t);
   }, []);
 
-  // Horizontal scroll (desktop only)
+  // 🟢 MOUSE WHEEL HORIZONTAL SCROLL - ENABLED!
   useEffect(() => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
+    const el = scrollRef.current;
+    if (!el || !isDesktop) return; // Desktop only
 
-    const wheelHandler = (e: WheelEvent) => {
-      if (isDesktop && e.deltaY !== 0) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
+    const wheel = (e: WheelEvent) => {
+      if (!isDesktop) return;
+      
+      e.preventDefault();
+      el.scrollLeft += e.deltaY * 1.5; // Smooth horizontal scroll
     };
 
-    el.addEventListener("wheel", wheelHandler, { passive: false });
-    return () => el.removeEventListener("wheel", wheelHandler);
+    el.addEventListener("wheel", wheel, { passive: false });
+    return () => el.removeEventListener("wheel", wheel);
   }, [isDesktop]);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden overscroll-none">
-
+    <div className="relative w-screen h-screen overflow-hidden">
       {/* RED INTRO */}
       {showRed && (
         <motion.div
-          className="absolute top-0 left-0 w-screen h-screen z-50 flex items-center justify-center overflow-hidden"
-          style={{ backgroundColor: "#B43934" }}
+          className="absolute inset-0 z-50 flex items-center justify-center"
+          style={{ background: "#B43934" }}
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, delay: 2.5 }}
-        >
-          {/* INTRO ANIMATION */}
-        </motion.div>
+          animate={{ opacity: 1 }}
+        />
       )}
 
-      {/* MAIN SCROLL CONTAINER */}
+      {/* MAIN WRAPPER */}
       <div
-        ref={scrollContainerRef}
-        className={`scrollbar-none flex h-screen w-screen overflow-y-hidden overscroll-none ${
-          isDesktop
-            ? "flex-row overflow-x-auto snap-x snap-mandatory"
-            : "flex-col overflow-y-auto"
-        }`}
+        ref={scrollRef}
+        className={`w-screen h-screen 
+          ${isDesktop 
+            ? "flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory" 
+            : "flex flex-col overflow-y-auto overflow-x-hidden snap-y snap-mandatory"
+          }
+        `}
         style={{ scrollBehavior: "smooth" }}
       >
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        {/* SECTIONS */}
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Hero />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Distinctive />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Services />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Portfolio />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Contact />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Product />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <Press />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen" : "min-h-screen"
+        }`}>
           <ComingSoon />
         </section>
-
-        <section className="min-w-full h-screen snap-start overflow-hidden">
+        
+        <section className={`w-full snap-start flex-shrink-0 ${
+          isDesktop ? "h-screen pb-20" : "min-h-screen pb-20"
+        }`}>
           <Footer />
         </section>
-
       </div>
     </div>
   );
