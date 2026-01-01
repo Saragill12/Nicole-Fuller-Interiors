@@ -32,20 +32,21 @@ export default function HorizontalScroll() {
   }, []);
 
   // 🟢 MOUSE WHEEL HORIZONTAL SCROLL - ENABLED!
-  useEffect(() => {
+ useEffect(() => {
+  if (!isDesktop) return;
+
+  const onWheel = (e: WheelEvent) => {
     const el = scrollRef.current;
-    if (!el || !isDesktop) return; // Desktop only
+    if (!el) return;
 
-    const wheel = (e: WheelEvent) => {
-      if (!isDesktop) return;
-      
-      e.preventDefault();
-      el.scrollLeft += e.deltaY * 1.5; // Smooth horizontal scroll
-    };
+    e.preventDefault();
+    el.scrollLeft += e.deltaY * 1.5;
+  };
 
-    el.addEventListener("wheel", wheel, { passive: false });
-    return () => el.removeEventListener("wheel", wheel);
-  }, [isDesktop]);
+  window.addEventListener("wheel", onWheel, { passive: false });
+  return () => window.removeEventListener("wheel", onWheel);
+}, [isDesktop]);
+
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">
