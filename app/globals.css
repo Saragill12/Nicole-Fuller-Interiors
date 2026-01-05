@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* =============================
+   Root Variables
+============================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -12,6 +15,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* =============================
+   Dark Mode
+============================= */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,15 +25,21 @@
   }
 }
 
-html, body {
+/* =============================
+   GLOBAL RESET (⚠️ FIXED)
+============================= */
+html,
+body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;  /* horizontal extra space hide */
+  width: 100%;
+  height: 100%;
+  /* ❌ overflow-x hidden REMOVED */
 }
 
-
-/* Smooth scrolling for the container */
-
+/* =============================
+   Fonts
+============================= */
 @font-face {
   font-family: "meno-display";
   src: url("/fonts/meno-display.woff2") format("woff2"),
@@ -36,6 +48,9 @@ html, body {
   font-style: normal;
 }
 
+/* =============================
+   Logo Hover
+============================= */
 .logo svg path {
   fill: #3d3d3d;
   transition: fill 0.3s ease;
@@ -44,11 +59,15 @@ html, body {
 .logo:hover svg path {
   fill: rgb(163, 47, 47);
 }
+
+/* =============================
+   Scroll Indicator
+============================= */
 .scrollIndicator {
   display: flex;
   align-items: center;
-  gap: 8px; /* space between text and arrow */
-  color: #B43934; /* applies to both text and arrow */
+  gap: 8px;
+  color: #B43934;
   font-family: sans-serif;
   font-weight: bold;
   cursor: pointer;
@@ -61,7 +80,10 @@ html, body {
 }
 
 @keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(5px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
-      
