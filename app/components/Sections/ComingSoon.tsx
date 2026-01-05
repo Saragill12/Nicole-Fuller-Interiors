@@ -68,7 +68,7 @@ export default function HomeSection() {
             absolute z-20 font-serif
             text-4xl sm:text-5xl md:text-7xl lg:text-8xl
             top-[85%] sm:top-[80%] md:top-1/2 lg:top-1/2
-            left-1/2 sm:left-[50%] md:-left-[80px] lg:-left-[120px]
+            left-1/2 sm:left-[50%] md:-left-[80px] lg:-left-[1px]
             -translate-x-1/2 sm:-translate-x-1/2 md:-translate-x-0 lg:-translate-x-0
             -translate-y-0 sm:-translate-y-0 md:-translate-y-1/2 lg:-translate-y-1/2
             sm:-rotate-0 md:-rotate-90 lg:-rotate-90
