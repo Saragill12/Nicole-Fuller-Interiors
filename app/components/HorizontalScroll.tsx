@@ -18,7 +18,9 @@ export default function HorizontalScroll() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [showRed, setShowRed] = useState(true);
 
-  // Detect screen
+  /* =============================
+     Detect Desktop
+  ============================== */
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 1024);
     check();
@@ -26,13 +28,17 @@ export default function HorizontalScroll() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  // Red intro
+  /* =============================
+     Red Intro Screen
+  ============================== */
   useEffect(() => {
     const t = setTimeout(() => setShowRed(false), 2500);
     return () => clearTimeout(t);
   }, []);
 
-  // 🟢 REAL FIX — wheel on container (NOT window)
+  /* =============================
+     Mouse Wheel → Horizontal Scroll
+  ============================== */
   useEffect(() => {
     if (!isDesktop) return;
 
@@ -41,7 +47,7 @@ export default function HorizontalScroll() {
 
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
-      el.scrollLeft += e.deltaY * 1.2;
+      el.scrollLeft += e.deltaY * 2; // scroll speed
     };
 
     el.addEventListener("wheel", onWheel, { passive: false });
@@ -49,24 +55,24 @@ export default function HorizontalScroll() {
   }, [isDesktop]);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
-      
-      {/* RED INTRO */}
+    <div className="relative w-screen h-screen overflow-x-hidden overflow-y-hidden">
+
+      {/* 🔴 RED INTRO */}
       {showRed && (
         <motion.div
           className="absolute inset-0 z-50"
-          style={{ background: "#B43934" }}
+          style={{ backgroundColor: "#B43934" }}
         />
       )}
 
-      {/* SCROLL CONTAINER */}
+      {/* 🟢 SCROLL CONTAINER */}
       <div
         ref={scrollRef}
         className={`
           h-screen w-screen flex
           ${isDesktop
-            ? "flex-row overflow-x-scroll overflow-y-hidden"
-            : "flex-col overflow-y-scroll overflow-x-hidden"
+            ? "flex-row overflow-x-auto overflow-y-hidden"
+            : "flex-col overflow-y-auto overflow-x-hidden"
           }
         `}
         style={{
