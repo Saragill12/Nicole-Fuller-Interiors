@@ -35,7 +35,7 @@ export default function RootLayout({
             <a href="">
               <i className="icon-logo">
 
-                <svg className="w-[6rem] -mt-3 -ml-1 h-[5rem]"viewBox="0 0 97 63">
+                <svg className="w-[6.5rem] -mt-1 -ml-1 h-[5rem]"viewBox="0 0 97 63">
                   <g fill="none" fillRule="evenodd">
                     <g transform="translate(-16, -15)" fill="#3D3D3D">
                       <g transform="translate(16, 15)">

@@ -11,7 +11,7 @@ export default function DistinctiveSection() {
 
   return (
     <motion.div
-      className="w-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-24 relative z-50"
+      className="w-full flex flex-col md:flex-row items-center -ml-5 justify-between px-4 sm:px-6 md:px-24 relative z-50"
       initial={{ opacity: 0, scale: 0.92 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
@@ -19,7 +19,7 @@ export default function DistinctiveSection() {
     >
       {/* LEFT TEXT */}
       <motion.div
-        className="w-full md:w-1/2 text-black leading-tight mt-6 md:mt-0"
+        className="w-full md:w-1/2 text-black leading-tight mt-25 md:mt-0"
         initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
@@ -36,7 +36,7 @@ export default function DistinctiveSection() {
 
       {/* RIGHT IMAGE */}
       <motion.div
-        className="w-full md:w-1/2 h-[40vh] sm:h-[55vh] md:h-[100vh] flex items-center justify-center relative mt-6 md:mt-0"
+        className="w-full md:w-1/2 h-[40vh] sm:h-[55vh] md:h-[100vh] flex items-center justify-center relative mt-20 md:mt-0"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
