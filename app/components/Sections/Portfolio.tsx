@@ -15,18 +15,19 @@ export default function ArtAdvisory() {
         {/* LEFT TEXT (unchanged for desktop) */}
         <div className="space-y-4 md:space-y-6 flex flex-col justify-center text-center md:text-left">
           <motion.p
-            className="text-[15px] md:text-[21px] w-full md:w-[330px] md:mt-20 md:-ml-20 text-[#333] leading-relaxed mx-auto md:mx-0"
+            className="text-[13px] md:text-[15px] w-full md:w-[350px] md:mt-20 mt-10 md:-ml-20 text-[#333] leading-relaxed mx-auto md:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6 }}
           >
-            The Nicole Fuller Interiors studio is based in NYC, with a sister office
-            in Los Angeles, and a satellite office in London.
+The Nicole Fuller Interiors studio is based in NYC, with a sister office in Los Angeles, and a satellite office in London. With a large team specializing in a number of fields, we look forward to hearing from you.
+
+
           </motion.p>
 
           <motion.a
             href="#"
-            className="inline-block text-xl md:text-3xl mt-1 md:mt-0 font-semibold text-black pb-1 md:-ml-20"
+            className="inline-block text-xl md:text-2xl mt-6 md:-mt-5 font-semibold text-black pb-1 md:-ml-20"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -62,13 +63,14 @@ export default function ArtAdvisory() {
           <motion.h2
             className="
               absolute 
-              -bottom-10 md:-bottom-2 
+              -bottom-20 md:-bottom-2 
               left-1/2 -translate-x-1/2 
               text-[38px] sm:text-[52px] md:text-[96px] 
               font-serif font-light 
               text-black 
               z-20 
               whitespace-nowrap
+              ml-0 md:-ml-10 
             "
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
@@ -78,7 +80,7 @@ export default function ArtAdvisory() {
           </motion.h2>
 
           {/* Lower text */}
-          <div className="mt-10 md:mt-5 text-center max-w-[500px] mx-auto px-4 md:px-0">
+          <div className="mt-14 md:mt-5 text-center max-w-[500px] mx-auto px-4 md:px-0">
             <motion.p
               className="text-[14px] md:text-[16px] text-[#333] leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +92,7 @@ export default function ArtAdvisory() {
 
             <motion.a
               href="#"
-              className="inline-block text-lg md:text-2xl mt-3 font-semibold text-black pb-1"
+              className="inline-block text-lg md:text-2xl mt-8 md:mt-0 font-semibold text-black pb-1"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.5 }}

@@ -71,7 +71,7 @@ export default function CollaborationSection() {
       {/* CENTER TEXT */}
       <div className="w-full md:w-1/4 h-auto md:h-full flex flex-col justify-center items-start px-6 md:px-8 bg-white mt-10 md:mt-0">
         <motion.p 
-          className="text-black text-base leading-[26px] md:text-base"
+          className="text-black text-base   leading-[26px] md:text-base"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}

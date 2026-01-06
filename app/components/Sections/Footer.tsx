@@ -42,11 +42,9 @@ export default function NicolePage() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          Nicole Fuller, founder and principle of Nicole Fuller Interiors, is an
-          internationally acclaimed interior designer renowned for her artfully
-          appointed, one of a kind residential and commercial spaces. A member of
-          ELLE Decor magazine&apos;s coveted A-List and Luxe magazine&apos;s Gold List,
-          Nicole&apos;s work is synonymous with sophisticated, nuanced luxury.
+          Nicole Fuller, founder and principle of Nicole Fuller Interiors, is an internationally acclaimed interior designer renowned for her artfully appointed, one of a kind residential and commercial spaces. A member of ELLE Decor magazine’s coveted A-List and Luxe magazine’s Gold List, Nicole’s work is synonymous with sophisticated, nuanced luxury, where attention to detail, savoir faire, and a cultivated eye culminate in spaces that are as singular as her clients.
+
+
         </motion.p>
 
         <motion.h2
@@ -67,11 +65,12 @@ export default function NicolePage() {
           left-1/2 sm:left-auto
           -translate-x-1/2 sm:translate-x-0
           flex flex-col items-center
-          space-y-6 sm:space-y-8 md:space-y-10
+          space-y-6 sm:space-y-8 md:space-y-14
           w-28 sm:w-auto md:gap-12 
+          text-black 
         "
       >
-        <motion.span className="text-xs sm:text-sm tracking-[0.12em] text-center rotate-0 sm:rotate-90 whitespace-nowrap">
+        <motion.span className="text-xs sm:text-sm tracking-[0.12em]  text-center rotate-0 sm:rotate-90 whitespace-nowrap">
           INSTAGRAM
         </motion.span>
         <motion.span className="text-xs sm:text-sm tracking-[0.12em] text-center rotate-0 sm:rotate-90 whitespace-nowrap">
