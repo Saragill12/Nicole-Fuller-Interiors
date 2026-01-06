@@ -27,27 +27,31 @@ export default function Intro() {
         "
       >
         {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: "easeOut" }}
-          className="
-            text-[1.9rem] 
-            sm:text-3xl 
-            md:text-[6.2rem]
-            leading-[2.2rem] 
-            sm:leading-[2.8rem] 
-            md:leading-[6.8rem]
-            font-light 
-            text-[#252525]
-          "
-          style={{ fontFamily: 'meno-display, serif' }}
-        >
-          Synonymous <br />
-          with sophisticated, <br />
-          & nuanced <br />
-          <em>luxury</em>
-        </motion.h1>
+       <motion.h1
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.1, ease: "easeOut" }}
+  className="
+    text-[1.9rem] 
+    sm:text-3xl 
+    md:text-[6.2rem]
+    leading-[2.2rem] 
+    sm:leading-[2.8rem] 
+    md:leading-[6.5rem]
+    font-light 
+    text-[#252525]
+    ml-0            /* ✅ mobile */
+    md:-ml-8        /* ✅ desktop only */
+    text-left
+  "
+  style={{ fontFamily: 'meno-display, serif' }}
+>
+  Synonymous <br />
+  with sophisticated, <br />
+  & nuanced <br />
+  <em>luxury</em>
+</motion.h1>
+
 
         {/* Paragraph */}
         <motion.p
@@ -61,13 +65,13 @@ export default function Intro() {
             text-[#333]
             w-full
             md:w-[22rem] 
-            md:ml-[31.5rem] 
+            md:ml-[31rem] 
             md:-mt-[11.2rem]
           "
         >
-          Nicole Fuller Interiors is a multi-faceted interior design firm based in
-          New York City and Los Angeles, specializing in high-end residential and
-          commercial projects.
+Nicole Fuller Interiors is a multi-faceted interior design firm based in New York City and Los Angeles, specializing in high-end residential and commercial design projects in the US and abroad. A passionate designer, Nicole Fuller has acquired a list of savvy international clients.
+
+
         </motion.p>
 
         {/* Scroll Arrow */}
@@ -84,21 +88,27 @@ export default function Intro() {
             cursor-pointer
           "
         >
-          <span className="text-sm sm:text-lg md:text-xl">Scroll</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 sm:h-7 md:h-10"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#B43934"
-            strokeWidth={1}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
+        <div className="flex items-center justify-end gap-2 pr-4 sm:pr-6 md:pr-10">
+  <span className="text-sm sm:text-lg md:text-3xl mt-0">
+    Scroll
+  </span>
+
+  <svg 
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-5 sm:h-7 md:h-10"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="#B43934"
+    strokeWidth={1}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M17 8l4 4m0 0l-4 4m4-4H3"
+    />
+  </svg>
+</div>
+
         </motion.div>
       </div>
 
@@ -112,7 +122,7 @@ export default function Intro() {
         "
       >
         {/* SVG ONLY ON DESKTOP */}
-            <div className="absolute -left-40 sm:-left-60 md:-left-80 -top-1 w-[110%] h-full opacity-10 z-40 hidden md:block">
+            <div className="absolute -left-40 sm:-left-60 md:-left-115 -top-1 w-[140%] h-full opacity-10 z-40 hidden md:block">
 
           <svg viewBox="0 0 359 478" className="w-full h-full">
                <g fill="none" fillRule="evenodd">
@@ -132,6 +142,7 @@ export default function Intro() {
             object-cover 
             rounded-md sm:rounded-lg 
             md:rounded-none
+            
           "
         />
       </div>

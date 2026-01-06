@@ -12,20 +12,20 @@ export default function PressSection() {
       <div className="w-full max-w-7xl flex flex-col md:flex-row items-center md:items-start justify-between relative">
 
         {/* LEFT TEXT */}
-        <div className="w-full md:w-[30%] text-black text-2xl leading-relaxed pt-5 md:pt-24 text-center md:text-left order-2 md:order-1">
+        <div className="w-full md:w-[34%] text-black text-[13px] leading-relaxed pt-5 md:pt-24 text-center md:text-left order-2 md:order-1">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            Recognized in her industry as a tastemaker, Nicole Fuller cultivates  
-            long standing and mutually beneficial collaborations with leading 
-            product companies.
+            Recognized in her industry as a tastemaker, Nicole Fuller cultivates long standing and mutually beneficial collaborations with leading product companies, including the Rug Company, Savoir Beds, Dempsey & Carroll and Fromental.
+
+
           </motion.div>
           
           <motion.div 
-            className="mt-4 font-serif tracking-wide text-2xl"
+            className="mt-4 font-serif tracking-wide text-xl text-gray-600"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
@@ -36,7 +36,7 @@ export default function PressSection() {
         </div>
 
         {/* CENTER IMAGES */}
-        <div className="flex flex-col items-center gap-12 mt-10 md:ml-50 md:mt-0 order-1 md:order-2">
+        <div className="flex flex-col items-center gap-12 mt-10 md:ml-50 md:-mt-10 order-1 md:order-2">
           <motion.div
             initial={{ opacity: 0, y: -20 }}  
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function PressSection() {
           >
             <Image src={assets12} alt="Center" className="w-full h-auto object-cover" />
             <motion.h2 
-              className="absolute top-1/2 left-[-80px] md:left-[-120px] -translate-y-1/2 -rotate-90 text-5xl md:text-8xl font-serif text-black leading-none"
+              className="absolute top-1/2 left-[-80px] md:left-[-90px] -translate-y-1/2 -rotate-90 text-5xl md:text-7xl font-serif text-black leading-none"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
@@ -78,7 +78,7 @@ export default function PressSection() {
         </div>
 
         {/* RIGHT TEXT */}
-        <div className="w-full md:w-[46%] text-black text-2xl leading-relaxed pt-10 md:pt-24 text-center md:text-left order-3 md:order-3">
+        <div className="w-full md:w-[37%] text-black text-[15px] ml-0 md:ml-10 leading-relaxed pt-10 md:pt-24 text-center md:text-left order-3 md:order-3">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -90,7 +90,7 @@ export default function PressSection() {
           </motion.div>
           
           <motion.div 
-            className="mt-4 font-serif tracking-wide text-2xl"
+            className="mt-2  font-serif tracking-wide text-xl"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
