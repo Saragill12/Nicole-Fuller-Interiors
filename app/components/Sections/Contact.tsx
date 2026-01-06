@@ -18,7 +18,7 @@ export default function TrendingSection() {
   return (
     <section className="relative w-screen h-auto md:h-screen flex flex-col items-center justify-start bg-white overflow-visible px-4 sm:px-6 md:px-8 mt-20 md:mt-0">
       {/* ROTATED TEXT */}
-      <div className="absolute md:left-[-120px] left-12 top-14 md:top-1/2 md:-translate-y-1/2 md:-rotate-90 rotate-0 z-10">
+      <div className="absolute md:left-[-170px] left-12 top-14 md:top-1/2 md:-translate-y-1/2 md:-rotate-90 rotate-0 z-10">
         <motion.span
           className="block text-3xl sm:text-4xl md:text-6xl font-serif font-light text-neutral-900"
           initial={{ opacity: 0, y: 50 }}
@@ -29,7 +29,7 @@ export default function TrendingSection() {
         </motion.span>
 
         <motion.span
-          className="block font-serif text-4xl sm:text-5xl md:text-5xl relative z-10"
+          className="block font-serif text-4xl sm:text-5xl md:text-6xl relative z-10"
           initial={{ opacity: 0, x: 120 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
@@ -38,7 +38,7 @@ export default function TrendingSection() {
         </motion.span>
 
         <motion.span
-          className="block text-3xl sm:text-4xl md:text-5xl font-serif font-light text-neutral-900 opacity-80"
+          className="block text-3xl sm:text-4xl md:text-6xl font-serif font-light text-neutral-900 opacity-80"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}

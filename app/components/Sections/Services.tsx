@@ -8,10 +8,10 @@ export default function Services() {
     <div className="h-screen flex flex-col md:flex-row overflow-hidden">
 
       {/* LEFT TEXT */}
-      <div className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-16 mt-6 md:mt-0">
+      <div className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-16 ml-0 md:-ml-15 mt-6 md:mt-0">
         <div className="md:ml-0">
           <motion.p 
-            className="text-[14px] sm:text-[15px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[24px] text-[#333] w-full md:w-[345px]"
+            className="text-[14px] sm:text-[15px] md:text-[16px] leading-[20px] sm:leading-[22px] md:leading-[24px] text-[#333] w-full md:w-[345px]"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
